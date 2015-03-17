@@ -1,0 +1,21 @@
+{
+    "name": "iseredov/yii2-oci8pdo",
+    "description": "Translate pdo command to oci8",
+    "type": "yii2-extension",
+    "keywords": ["yii2","oci8","pdo","database","oracle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iseredov",
+            "email": "iseredov@inbox.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "iseredov\\oci8pdo\\": ""
+        }
+    }
+}
