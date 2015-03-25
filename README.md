@@ -30,7 +30,7 @@ Once the extension is installed, simply use it in your code by  :
 ```php
         'db' => [
             'class' => 'iseredov\oci8pdo\Connection',
-            'dsn' => 'oci:dbname=//dbgost:1521/dbasename',
+            'dsn' => 'oci:dbname=//dbhost:1521/dbasename',
             'username' => 'username',
             'password' => 'password',
             'charset' => 'utf8',
