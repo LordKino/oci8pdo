@@ -28,4 +28,13 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \iseredov\oci8pdo\AutoloadExample::widget(); ?>```
+        'db' => [
+            'class' => 'iseredov\oci8pdo\Connection',
+            'dsn' => 'oci:dbname=//dbgost:1521/dbasename',
+            'username' => 'username',
+            'password' => 'password',
+            'charset' => 'utf8',
+            'attributes' => [
+                PDO::ATTR_STRINGIFY_FETCHES => true,
+            ],
+        ],```
