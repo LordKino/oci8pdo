@@ -15,7 +15,8 @@ class Connection extends \yii\db\Connection
         'sqlite' => 'yii\db\sqlite\Schema', // sqlite 3
         'sqlite2' => 'yii\db\sqlite\Schema', // sqlite 2
         'sqlsrv' => 'yii\db\mssql\Schema', // newer MSSQL driver on MS Windows hosts
-        'oci' => 'iseredov\oci8pdo\oci8\Schema', // Oracle driver
+        'oci' => 'yii\db\oci\Schema', // Oracle driver
+        'oci8' => 'iseredov\oci8pdo\oci8\Schema', // Oracle OCI8 driver
         'mssql' => 'yii\db\mssql\Schema', // older MSSQL driver on MS Windows hosts
         'dblib' => 'yii\db\mssql\Schema', // dblib drivers on GNU/Linux (and maybe other OSes) hosts
         'cubrid' => 'yii\db\cubrid\Schema', // CUBRID
