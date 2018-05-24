@@ -6,7 +6,7 @@
  * Time: 16:02
  */
 
-namespace iseredov\oci8pdo\oci8;
+namespace lordkino\oci8pdo\oci8;
 
 
 class Oci8Statement extends \yajra\Pdo\Oci8\Statement {
