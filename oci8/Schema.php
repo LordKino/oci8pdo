@@ -6,7 +6,7 @@
  * Time: 16:26
  */
 
-namespace iseredov\oci8pdo\oci8;
+namespace lordkino\oci8pdo\oci8;
 
 use yii\base\InvalidCallException;
 use yii\db\Connection;
