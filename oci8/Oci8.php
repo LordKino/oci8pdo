@@ -8,10 +8,14 @@
 
 namespace lordkino\oci8pdo\oci8;
 
-use yajra\Pdo\Oci8\Exceptions\Oci8Exception;
+use Yajra\Pdo\Oci8\Exceptions\Oci8Exception;
 use lordkino\oci8pdo\oci8\Oci8Statement as Statement;
 
-class Oci8 extends \yajra\Pdo\Oci8 {
+use ReflectionClass;
+use yii\db\Connection;
+use PDO;
+
+class Oci8 extends \Yajra\Pdo\Oci8 {
 
 
     /**
@@ -23,6 +27,13 @@ class Oci8 extends \yajra\Pdo\Oci8 {
      * @param array $options [optional]
      * @throws Oci8Exception
      */
+    
+    private $_options = array();
+    
+    private $_dbh;
+    
+    public $pdoClass = 'Yajra\Pdo\Oci8';
+    
     public function __construct($dsn, $username, $password, array $options = array())
     {
         if (strpos($dsn, ':') !== false) {
@@ -30,6 +41,11 @@ class Oci8 extends \yajra\Pdo\Oci8 {
             $dsn = explode(';',$dsn,1);
             $dsn = substr($dsn[0], strpos($dsn[0], '=') + 1);
         }
+        
+        $prop = (new ReflectionClass($this->pdoClass))->getProperty('dbh');
+        $prop->setAccessible(true);
+        $this->_dbh = $prop->getValue(new \Yajra\Pdo\Oci8($dsn, $username, $password));
+        
         parent::__construct($dsn, $username, $password, $options);
     }
 
