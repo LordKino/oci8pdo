@@ -1,6 +1,6 @@
 <?php
 
-namespace iseredov\oci8pdo;
+namespace lordkino\oci8pdo;
 
 use Yii;
 
@@ -22,7 +22,7 @@ class Connection extends \yii\db\Connection
         'cubrid' => 'yii\db\cubrid\Schema', // CUBRID
     ];
 
-    public $pdoClass = 'iseredov\oci8pdo\oci8\Oci8';
+    public $pdoClass = 'lordkino\oci8pdo\oci8\Oci8';
 
 }
 
