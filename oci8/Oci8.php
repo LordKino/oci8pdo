@@ -6,10 +6,10 @@
  * Time: 12:59
  */
 
-namespace iseredov\oci8pdo\oci8;
+namespace lordkino\oci8pdo\oci8;
 
 use yajra\Pdo\Oci8\Exceptions\Oci8Exception;
-use iseredov\oci8pdo\oci8\Oci8Statement as Statement;
+use lordkino\oci8pdo\oci8\Oci8Statement as Statement;
 
 class Oci8 extends \yajra\Pdo\Oci8 {
 
